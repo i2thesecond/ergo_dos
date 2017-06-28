@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link href="css/animate.css/animate.min.css" rel="stylesheet">
+	<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom Font -->
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+
+	<link href="css/custom/custom.css" rel="stylesheet">
+
+	<meta charset="utf-8">
+	<meta description="An attempt at an English version of Shiritori (https://en.wikipedia.org/wiki/Shiritori).
+	Utilizing NLP_Compromise api for dictionary and related functions. Not all words in the english language are
+	avaliable using this api.">
+
+	<title>ErgoDos</title>
+
+</head>
+
+<body>
+	<div class="site-wrapper">
+		<div class="site-wrapper-inner">
+			<div class="container">
+				<header class="head">
+					<div class="inner">
+						<div class="row">
+							<div class="col-xs-12">
+								<h1 id="title-of-game">ErgoDos</h1>
+							</div>
+						</div>
+					</div>
+				</header>
+
+
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<p id="instructions" class="text-xs-center">Each turn consists of a word chosen by the player.<br>
+							The next player must choose a word that begins with the last letter of the previous word.<br>
+							Words may only be used once.<br>
+							A player loses when a non-valid word is entered.<br>
+							Note: not all english lexicon is used.</p>
+       						<button id="start-game-btn" class="btn btn-default" type="button">Start Game</button>
+							<h1 id="main-message-prompt" class="text-xs-center hidden"></h1>
+						</div>
+					</div>
+
+				</div>
+
+				<footer class="foot">
+					<div class="container">
+						<div class="inner">
+						<div class="row">
+							<div class="col-xs-12">
+								<div id="user-thoughts" class="hidden">
+									<div class="input-group">
+										<input id="user-thought-input" type="text" class="form-control">
+										<span class="input-group-btn">
+       										<button id="user-thought-btn" class="btn btn-default" type="button">Say</button>
+      									</span>
+									</div>
+								</div></div>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<!--	JAVASCRIPT LIBRARIES	 -->
+	<script src="js/nlp_compromise/nlp_compromise.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="js/tether/tether.min.js"></script>
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<script src="js/lettering/jquery.lettering.js"></script>
+	<script src="js/textillate/jquery.textillate.js"></script>
+	<script src="js/game_scripts/game.js"></script>
+</body>
+
+</html>
